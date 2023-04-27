@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="author" content="Joaquin Suazo" />
+        <title>Evaluacion N°2</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet" />
+        <style>
+            :root {
+                --bs-body-font-family: "Work Sans", sans-serif;
+            }
+            [data-bs-theme="light"] {
+                --bs-link-color-rgb: 230, 100, 500;
+                --bs-body-bg: #eb0976;
+            }
+
+            [data-bs-theme="dark"] {
+                --bs-link-color-rgb: 100, 170, 300;
+                --bs-body-bg: #0903a6;
+            }
+
+            .bd-mode-toggle {
+                z-index: 1500;
+            }
+
+            #frase {
+                background: #e6edd0 url("https://picsum.photos/id/106/2592/1728?blur=10") center center no-repeat;
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body class="overflow-x-hidden">
+        <!--acá deben agregar más símbolos-->
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="check2" viewBox="0 0 16 16">
+                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+            </symbol>
+            <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+                <path
+                    d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+                />
+                <path
+                    d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+                />
+            </symbol>
+            <symbol id="sun-fill" viewBox="0 0 16 16">
+                <path
+                    d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                />
+            </symbol>
+            <symbol id="emoji" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                <path
+                    d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"
+                />
+            </symbol>
+        </svg>
+        <!--acá el cambio de themes-->
+        <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+            <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center bg-dark shadow-sm" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+                <svg class="bi my-1 theme-icon-active" fill="gray" width="1em" height="1em"><use href="#circle-half"></use></svg>
+                <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+                <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                        <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>Light<svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                        <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>Dark<svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <!--acá el encabezado que se esconde/depliega con un clic del menú-->
+        <header data-bs-theme="dark">
+            <div class="collapse text-bg-dark" id="navbarHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-7 py-4">
+                            <h4>Sobre mi</h4>
+                            <p class="text-body-secondary">
+                                Hola! soy Joaquin Suazo y en esta pagina veras un poco de mis experiencias estudiando diseño ademas de presentar algunas de mis capacidades a la hora de diseñar algo que me permiten tener una cierta ventaja.
+                            </p>
+                        </div>
+                        <div class="col-sm-4 offset-md-1 py-4">
+                            <h4>Contáctame</h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#"> Correo electronico</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
+                                        <path
+                                            d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"
+                                        />
+                                    </svg>
+                                </li>
+
+                                <li>
+                                    <a href="#"> Twitch</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitch" viewBox="0 0 16 16">
+                                        <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z" />
+                                        <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z" />
+                                    </svg>
+                                </li>
+
+                                <li>
+                                    <a href="#"> Twitter</a>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter me-2" viewBox="0 0 16 16">
+                                        <path
+                                            id="logo"
+                                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                                        />
+                                    </svg>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar navbar-dark bg-dark shadow-sm">
+                <div class="container">
+                    <a href="index.html" class="navbar-brand d-flex align-items-center">Joaquin Suazo</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!--acá está lo principal-->
+        <main id="alla">
+            <!--una sección para la frase-->
+            <section class="py-5" id="frase">
+                <div class="container">
+                    <div class="row">
+                        <div class="col py-5">
+                            <p class="display-6 p-1 text-white">
+                                Diseñar es mucho más que solo ensamblar, ordenar, o clarificar. Es añadir valor y significado, iluminar, simplificar, clarificar, modificar, dramatizar, persuadir y, tal vez, sorprender. Diseñar es convertir
+                                la prosa en poesía. -Pail Rand
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--una sección para las ventajas competitivas-->
+            <section class="py-5">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-lg-4">
+                            <h2 class="h4 fw-bolder">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg>
+                                Primera ventaja
+                            </h2>
+                            <p>Capacidad para poder observar los fenómenos del entorno para asi poder analizar las personas o al ambiente actual en el que cual se encuentra presente los individuos.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <h2 class="h4 fw-bolder">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
+                                    <path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                                    <path
+                                        d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z"
+                                    />
+                                </svg>
+                                Segunda ventaja
+                            </h2>
+                            <p>la capacidad de administrar los recursos e informacion segun la situacion en en la que se encuentran los individuos especificos.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <h2 class="h4 fw-bolder">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-bookmark" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M6 8V1h1v6.117L8.743 6.07a.5.5 0 0 1 .514 0L11 7.117V1h1v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8z" />
+                                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                                    <path
+                                        d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"
+                                    />
+                                </svg>
+                                Tercera ventaja
+                            </h2>
+                            <p>la capacidad de poder asignar y sistematizar los diferentes procesos dentro de un proyecto.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--una sección para el portafolio-->
+            <section class="py-5 bg-body-tertiary">
+                <div class="container" id="alla">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 mb-3 g-3" id="aca"></div>
+                </div>
+            </section>
+        </main>
+        <!--un pie de página-->
+        <footer class="py-4 bg-dark text-light">
+            <div class="container px-5"><p class="text-center small">Joaquin Suazo &copy; 2023</p></div>
+        </footer>
+        <!--algo de JS-->
+        <script>
+            const data = [
+                {
+                    img: ["imagen proyecto tabla.jpg", "imagen proyecto tabla 2.jpg", "imagen proyecto tabla 3.jpg"],
+                    title: "Tabla de cortar de stanley Morison.",
+                    text: "<p>En este  proyecto  tuve que hacer una tabla de cortar basado en la tipografia Times New Roman. las mas representativa del creador Stanley Morison. </p>",
+                },
+                {
+                    img: ["imagen proyecto caja de te.jpg", "imagen proyecto caja de te 2.jpg", "imagen proyecto caja de te 3.jpg"],
+                    title: "Caja de te tradicional chileno.",
+                    text: "<p>En este  proyecto  tuve que crear una caja de te para una hierba de te tradicional mapuche originarias del arbol de canelo.</p>",
+                },
+                {
+                    img: ["imagen proyecto puzzle.jpg", "imagen proyecto puzzle 2.jpg", "imagen proyecto puzzle 3.jpg"],
+                    title: "Puzzle 3D.",
+                    text: "<p>En este proyecto tuve que crear un puzzle 3D de un moai a base del programa Rhino y cortado posteriormente con una cortadora laser.</p>",
+                },
+                {
+                    img: ["imagen proyecto sombrero.jpg", "imagen proyecto sombrero 2.jpg", "imagen proyecto sombrero 3.jpg"],
+                    title: "Sombrero futurista.",
+                    text: "<p>En este proyecto tuve que diseñar un sombrero en base a las obras del estilo artistico del futurismo.</p>",
+                },
+                {
+                    img: ["https://picsum.photos/id/120/4928/3264.webp", "https://picsum.photos/id/172/2000/1325.jpg", "https://picsum.photos/id/132/1600/1066.jpg"],
+                    title: "Cielo noctuerno.",
+                    text:
+                        "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus erat porttitor dolor tempus scelerisque. Phasellus sodales nibh vitae lorem tristique, non ullamcorper augue congue. In hac habitasse platea dictumst. Mauris sollicitudin ex a ornare sagittis. Duis volutpat vitae risus ut ultricies. Nunc rutrum ipsum vitae consequat aliquam. Phasellus a malesuada odio, eu sollicitudin ligula. Nulla sodales id est non pellentesque. Nam lectus odio, mattis vel enim ut, elementum rhoncus libero.</p>",
+                },
+                {
+                    img: ["https://picsum.photos/id/316/4000/2667.jpg", "https://picsum.photos/id/202/2392/1260.jpg", "https://picsum.photos/id/212/2000/1394.jpg"],
+                    title: "Puente.",
+                    text:
+                        "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus erat porttitor dolor tempus scelerisque. Phasellus sodales nibh vitae lorem tristique, non ullamcorper augue congue. In hac habitasse platea dictumst. Mauris sollicitudin ex a ornare sagittis. Duis volutpat vitae risus ut ultricies. Nunc rutrum ipsum vitae consequat aliquam. Phasellus a malesuada odio, eu sollicitudin ligula. Nulla sodales id est non pellentesque. Nam lectus odio, mattis vel enim ut, elementum rhoncus libero.</p>",
+                },
+                {
+                    img: ["https://picsum.photos/id/232/3000/1987.jpg", "https://picsum.photos/id/242/1891/1280.jpg", "https://picsum.photos/id/249/3000/2000.jpg"],
+                    title: "Noche.",
+                    text:
+                        "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus erat porttitor dolor tempus scelerisque. Phasellus sodales nibh vitae lorem tristique, non ullamcorper augue congue. In hac habitasse platea dictumst. Mauris sollicitudin ex a ornare sagittis. Duis volutpat vitae risus ut ultricies. Nunc rutrum ipsum vitae consequat aliquam. Phasellus a malesuada odio, eu sollicitudin ligula. Nulla sodales id est non pellentesque. Nam lectus odio, mattis vel enim ut, elementum rhoncus libero.</p>",
+                },
+                {
+                    img: ["https://picsum.photos/id/274/3824/2520.jpg", "https://picsum.photos/id/299/5000/3288.jpg", "https://picsum.photos/id/315/2100/1500.jpg"],
+                    title: "La ciudad.",
+                    text:
+                        "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus erat porttitor dolor tempus scelerisque. Phasellus sodales nibh vitae lorem tristique, non ullamcorper augue congue. In hac habitasse platea dictumst. Mauris sollicitudin ex a ornare sagittis. Duis volutpat vitae risus ut ultricies. Nunc rutrum ipsum vitae consequat aliquam. Phasellus a malesuada odio, eu sollicitudin ligula. Nulla sodales id est non pellentesque. Nam lectus odio, mattis vel enim ut, elementum rhoncus libero.</p>",
+                },
+            ];
+            const donde = document.querySelector("#aca");
+            data.forEach((x, i) => {
+                donde.innerHTML +=
+                    '<div class="col"><div class="card h-100 shadow-sm bg-light-subtle border-0"><img class="card-img-top" src="' +
+                    x.img[0] +
+                    '"><div class="card-body"><p class="card-title"><a href="#" onclick = "detalle(' +
+                    i +
+                    ')" class="text-decoration-none">' +
+                    x.title +
+                    "</a></p></div></div></div>";
+            });
+            const dondemas = document.querySelector("#alla");
+            function detalle(nro) {
+                let fotos = "";
+                data[nro].img.forEach((f) => {
+                    fotos += '<img class="w-100 my-3 rounded" src="' + f + '">';
+                });
+                dondemas.innerHTML =
+                    '<section class="bg-body-tertiary"><div class="container pb-5"><div class="row"><div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 col-xxl-7 mx-auto"><h1 class="display-6 mt-5"><button type="button" class="btn btn-sm btn-outline-secondary shadow-sm mb-2 me-3 fw-bold" onClick="window.location.reload()">&larr; VOLVER</button> ' +
+                    data[nro].title +
+                    '</h1> <figure class="mb-2">' +
+                    fotos +
+                    "</figure>" +
+                    data[nro].text +
+                    "</div></div></div></section>";
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    </body>
+</html>
